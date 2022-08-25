@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <style>
+        .container{
+    display: flex;
+    justify-content: center;
+}
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+th{
+    background-color: aqua;
+}
+ h1{
+    display: flex;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    
+    <h1>Order table</h1>
+    <div class="container">
+        <table>
+        <tr>
+            <th>Customer ID</th>
+            <th>Inventory ID</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            
+        </tr>
+        <% for(let i=0;i<orders.length;i++){ %>
+            <tr>
+                <td><%=orders[i].customerid %></td>
+                <td><%= orders[i].inventoryid %></td>
+                <td><%= orders[i].itemname %></td>
+                <td><%= orders[i].quantity %></td>
+                
+            </tr>
+         <% } %>  
+        </table>
+        
+    </div>
+</body>
+</html>

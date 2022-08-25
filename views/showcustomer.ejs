@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        td, th{
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        th{
+            background-color: aqua;
+        }
+        div h1{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>Customer table</h1>
+    </div>
+    <div class="container">
+        <table class="table">
+        <tr>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+            <th>Email</th> 
+        </tr>
+        <% for(let i=0;i<customers.length;i++){ %>
+            <tr>
+                <td><%=customers[i].customerid %></td>
+                <td><%= customers[i].customername %></td>
+                <td><%= customers[i].email %></td>
+            </tr>
+         <% } %>  
+        </table>
+    </div>
+</body>
+</html>

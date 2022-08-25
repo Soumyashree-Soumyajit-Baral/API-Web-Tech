@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+    
+    <style>
+        .container{
+    display: flex;
+    justify-content: center;
+}
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+th{
+    background-color: aqua;
+}
+ h1{
+    display: flex;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <div>
+            <label for="inventoryid">Inventory ID :</label>
+            <input type="text" id="inventoryid" name="inventoryid">
+        </div>
+        <div>
+            <label for="inventorytype">Inventory Type :</label>
+            <input type="text" id="inventorytype">
+        </div>
+        <div>
+            <label for="itemname">Item Name :</label>
+            <input type="text" id="itemname">
+        </div>
+        <div>
+            <label for="availablequantity">Available Quantity :</label>
+            <input type="text" id="availablequantity">
+        </div>
+    </div> -->
+    <h1>Inventory table</h1>
+    <div class="container">
+        <table>
+        <tr>
+            <th>Inventory ID</th>
+            <th>Inventory Type</th>
+            <th>Item Name</th>
+            <th>Available Quantity</th>
+            
+        </tr>
+        <% for(let i=0;i<items.length;i++){ %>
+            <tr>
+                <td><%=items[i].inventoryid %></td>
+                <td><%= items[i].inventorytype %></td>
+                <td><%= items[i].itemname %></td>
+                <td><%= items[i].availablequantity %></td>
+                
+            </tr>
+         <% } %>  
+        </table>
+        
+    </div>
+</body>
+</html>
